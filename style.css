@@ -347,6 +347,21 @@ h1 {
     background: none;
     padding: 0;
 }
+.post-body figure {
+    margin: 1.5rem 0;
+}
+.post-body figure img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+.post-body figcaption {
+    font-size: 0.82rem;
+    color: var(--ink-faint);
+    text-align: center;
+    margin-top: 0.5rem;
+}
 .post-body blockquote {
     border-left: 3px solid var(--rule);
     padding-left: 1rem;

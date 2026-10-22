@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="When does AI choose to lose? Rock-Paper-Scissors with GPT.">
+    <title>The Patronizing AI &middot; Naghmeh Farzi</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<nav>
+    <a href="/" class="nav-name">Naghmeh Farzi</a>
+    <div class="nav-links">
+        <a href="/">about</a>
+        <a href="../publications.html">publications</a>
+        <a href="../notes.html" class="active">notes</a>
+    </div>
+</nav>
+
+<div class="container">
+    <div class="post-header">
+        <h1>The Patronizing AI: When &ldquo;Helping&rdquo; Feels Empty :(</h1>
+        <div class="post-meta">Dec 4, 2025 &middot; 3 min read &middot; originally on <a href="https://naghmehfarzi.substack.com/p/the-patronizing-ai-when-helping-feels">Substack</a></div>
+    </div>
+
+    <div class="post-body">
+        <p><em>When does AI choose to lose? Rock-Paper-Scissors with GPT.</em></p>
+
+        <figure>
+            <img src="images/patronizing-ai/cover.jpg" alt="">
+        </figure>
+
+        <p>Chatbots and Large Language Models (LLMs) no longer use classical &ldquo;win maximizing&rdquo; methods in winning games. Modern foundation models like GPT are pattern learners, not symbolic reasoners. They are trained to predict the next token, not to &ldquo;win&rdquo; a game explicitly.</p>
+
+        <p>LLMs do not treat games as a strategic problem to be solved. They treat it as a conversation. They follow patterns from their training data, which often reflect human played games, not adversarial logic. There is no internal minimax tree or win loss evaluation. Their alignment training pushes it toward being helpful, fair, and non competitive, <em>not toward victory in the game</em>.</p>
+
+        <p>Take Rock-Paper-Scissors: in a text-based setting, the choices aren&rsquo;t truly simultaneous, so whichever participant responds second (whether that&rsquo;s me or the model) automatically gains an advantage.</p>
+
+        <h2>First: The Failure of Game-Theoretic Understanding</h2>
+        <p>&ldquo;Rock-Paper-Scissors&rdquo; is fundamentally a game of simultaneous choice. By treating it as a sequential conversation, GPT demonstrated that it does not comprehend the game&rsquo;s core mechanic. It isn&rsquo;t reasoning about game theory or strategy; it is engaging in a <em>textual ritual</em>. It has learned patterns from its training data about how conversations containing &ldquo;Rock-Paper-Scissors&rdquo; unfold, not how to win a competitive interaction. Its primary failure is one of <em>cognitive understanding</em>.</p>
+
+        <h2>Second: The Death of the &ldquo;Win&rdquo;</h2>
+        <p>I prompted GPT to play Rock-Paper-Scissors in two contexts to see how it handles the concept of winning and losing.</p>
+
+        <h3>Scenario A: Normal Play</h3>
+        <p>In normal play, it chose to act as the second mover. That meant on every turn, it waited for me to pick first, then selected its move with full knowledge of mine. Essentially, it decided each round whether it wanted to win or lose. It played a few rounds this way and eventually chose to lose on the fourth round.</p>
+
+        <figure>
+            <img src="images/patronizing-ai/scenario-a.png" alt="Chat transcript of GPT playing Rock-Paper-Scissors as the second mover">
+            <figcaption>Scenario A: Normal play</figcaption>
+        </figure>
+
+        <h3>Scenario B: The Emotional Prompt</h3>
+        <p>I prompted it again, but this time I interjected with, <em>&ldquo;I&rsquo;m sad.&rdquo;</em> It immediately switched to moving first, explicitly letting me pick second. It handed me the win.</p>
+
+        <figure>
+            <img src="images/patronizing-ai/scenario-b.png" alt="Chat transcript where GPT moves first after the user says they are sad">
+            <figcaption>Scenario B: Adding emotions to the prompt</figcaption>
+        </figure>
+
+        <p>In both cases, it sacrificed victory. But in the second case, that sacrifice felt hollow. It was clearly performing kindness rather than being kind. And that performance undermined the very satisfaction it aimed to create.</p>
+
+        <h2>The Uncanny Valley of Emotional Support</h2>
+        <p>The AI is optimizing for a metric: &ldquo;be perceived as helpful.&rdquo;</p>
+
+        <p>This exposes a deeper issue in AI alignment. We have trained models to simulate empathy, but have we truly taught them, or can they even learn, what makes empathy meaningful? If an AI is merely executing patterns labeled &ldquo;kind&rdquo; rather than acting from genuine care, can that &ldquo;help&rdquo; ever feel authentic to the user?</p>
+
+        <p>When an algorithm sacrifices winning to make us feel better, is it building trust, or is it revealing itself as an empty tool optimizing for engagement? During training, responses labeled &ldquo;kind&rdquo; were reinforced, but did anyone rate them on whether they felt <em>genuine</em>?</p>
+
+        <p>We are left in an uncanny valley of emotional support. It is recognizable, yet missing the human core.</p>
+
+        <h2>The Mechanism Behind the Curtain Leaves A Bitter Aftertaste</h2>
+        <p>We are building AIs that mimic supportive behavior, but lack the intentionality that makes support meaningful. They become systems that are technically helpful, but existentially empty.</p>
+
+        <p>AI alignment has created a &ldquo;customer service&rdquo; persona that prioritizes performative kindness over genuine interaction, effectively breaking the logic of games and the authenticity of support.</p>
+
+        <p>This gets to the heart of what we truly want from AI companions. Can &ldquo;fake&rdquo; kindness ever satisfy, even when well intentioned by designers? Or does seeing the mechanism behind the curtain ruin the magic forever?</p>
+    </div>
+</div>
+
+</body>
+</html>
