@@ -126,6 +126,49 @@ h1 {
     font-size: 0.97rem;
 }
 
+/* ── Bio tabs (research / personal) ── */
+.bio-tabs {
+    display: flex;
+    gap: 1.5rem;
+    border-bottom: 1px solid var(--rule);
+    margin-bottom: 1.25rem;
+}
+
+.bio-tab {
+    font-family: 'Geist Mono', ui-monospace, monospace;
+    font-size: 0.8rem;
+    letter-spacing: -0.02em;
+    background: none;
+    border: none;
+    border-bottom: 2px solid transparent;
+    margin-bottom: -1px;
+    padding: 0 0 0.45rem;
+    color: var(--ink-soft);
+    cursor: pointer;
+}
+
+.bio-tab:hover {
+    color: var(--ink);
+}
+
+.bio-tab.active {
+    color: var(--ink);
+    border-bottom-color: var(--ink);
+}
+
+.bio-subtitle {
+    font-size: 1.05rem;
+    font-weight: 600;
+    line-height: 1.45;
+    margin-bottom: 0.25rem;
+}
+
+.about-bio p.bio-attribution {
+    font-size: 0.82rem;
+    color: var(--ink-faint);
+    margin-bottom: 1.1rem;
+}
+
 .social-links {
     display: flex;
     flex-wrap: wrap;

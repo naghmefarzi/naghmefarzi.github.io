@@ -37,6 +37,12 @@
             <h1>Naghmeh Farzi</h1>
             <p class="role">PhD Candidate in Computer Science &middot; University of New Hampshire</p>
 
+            <div class="bio-tabs" role="tablist">
+                <button class="bio-tab active" role="tab" data-tab="research" aria-selected="true">research</button>
+                <button class="bio-tab" role="tab" data-tab="personal" aria-selected="false">beyond research</button>
+            </div>
+
+            <div class="bio-panel" id="panel-research">
             <p>
                 I am a Computer Science PhD candidate at the
                 <a href="https://www.unh.edu/">University of New Hampshire</a>, advised by
@@ -63,6 +69,39 @@
                 collaborated with <a href="https://www.nextpoint.com/">Nextpoint</a> on a human-AI
                 platform for evaluating AI-generated legal deposition summaries.
             </p> -->
+            </div>
+
+            <div class="bio-panel" id="panel-personal" hidden>
+                <h2 class="bio-subtitle">What's in a name? That which we call a rose by any other name would smell as sweet.</h2>
+                <p class="bio-attribution">&mdash; Shakespeare, <em>Romeo and Juliet</em></p>
+                <p>
+                    Looking at my name, you might think it's long or hard to pronounce. My name has
+                    two syllables, but honestly I'm not great with phonetics, so I looked it up.
+                    Apparently it's pronounced roughly /næɣme/. The "gh" is a sound that doesn't
+                    really exist in English, but is somewhat similar to the French "r."
+                </p>
+                <p>
+                    Naghmeh (<span lang="fa">نغمه</span>) is a Farsi word associated with music, sound,
+                    and song, and it comes originally from Arabic. Something I've found interesting is
+                    that when I say my name to people from different countries with a little vowel
+                    perturbation, they sometimes recognize it as a word in their own language with the
+                    same meaning. This has happened with Turkish, Hindi, and Arabic speakers, all from
+                    countries fairly close to Iran. Further west, the word doesn't seem to ring a bell.
+                    So as long as the name you say is close enough to my name, I'm fine with it. An easy
+                    way to say it is <strong>Nag-may</strong>: "Nag" with the "a" as in <em>cat</em>,
+                    then "may".
+                </p>
+                <p>
+                    Funnily enough, back in my country people had trouble spelling my last name, and I
+                    got used to explaining it. We have several forms of "z" in my language, all
+                    pronounced the same. They're borrowed from Arabic, where they actually have
+                    different pronunciations. Also, in my language we don't write down short vowels (we
+                    only write them in the early years of elementary school), so with an unfamiliar word
+                    you're just relying on luck to get the short vowels right, and the "a" in my last
+                    name is one of them. I moved to the US as a certified expert in explaining my last
+                    name, only to find out it was my first name that needed explaining.
+                </p>
+            </div>
 
         </div>
     </div>
@@ -116,6 +155,27 @@
         </ul>
     </section>
 </div>
+
+<script>
+    (function () {
+        var tabs = document.querySelectorAll('.bio-tab');
+        function show(name) {
+            tabs.forEach(function (t) {
+                var on = t.dataset.tab === name;
+                t.classList.toggle('active', on);
+                t.setAttribute('aria-selected', on);
+                document.getElementById('panel-' + t.dataset.tab).hidden = !on;
+            });
+        }
+        tabs.forEach(function (t) {
+            t.addEventListener('click', function () {
+                show(t.dataset.tab);
+                history.replaceState(null, '', t.dataset.tab === 'research' ? location.pathname : '#' + t.dataset.tab);
+            });
+        });
+        if (location.hash === '#personal') show('personal');
+    })();
+</script>
 
 </body>
 </html>
