@@ -156,12 +156,17 @@ h1 {
     border-bottom-color: var(--ink);
 }
 
+.name-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.1rem;
+}
+
 .personal-art {
-    display: block;
-    width: 100%;
-    max-width: 160px;
+    flex: none;
+    width: 72px;
     height: auto;
-    margin: 0.5rem auto 1.5rem;
 }
 
 .bio-subtitle {
@@ -174,7 +179,7 @@ h1 {
 .about-bio p.bio-attribution {
     font-size: 0.82rem;
     color: var(--ink-faint);
-    margin-bottom: 1.1rem;
+    margin-bottom: 0;
 }
 
 .social-links {
